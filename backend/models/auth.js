@@ -9,4 +9,4 @@ const userSchema = moongoose.Schema ({
 
 userSchema.plugin(uniqueValidator);
 
-module.exports = moongoose.model('User', userSchema);
+module.exports = moongoose.model('Auth', userSchema);
