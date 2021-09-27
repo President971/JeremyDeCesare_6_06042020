@@ -1,3 +1,5 @@
+//---Middleware Regex du mail
+
 module.exports = (req, res, next) => {
     const validEmail = (email) => {
         let emailRegexp = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/

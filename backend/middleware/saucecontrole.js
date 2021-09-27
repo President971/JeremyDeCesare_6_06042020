@@ -1,3 +1,5 @@
+//Verification de d'ajout ou de la modification de sauce
+
 module.exports = (req, res, next) => {
     // Si il s'agit de la route post
     if (JSON.parse(req.body.sauce !== undefined)) {

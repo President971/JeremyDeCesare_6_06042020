@@ -2,6 +2,8 @@ const passwordValidator = require('password-validator');
 
 const passwordSchema = new passwordValidator();
 
+//---modele des motes passe attendu
+
 passwordSchema
 .is().min(10)                                    
 .is().max(64)                                  

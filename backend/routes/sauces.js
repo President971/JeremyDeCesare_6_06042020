@@ -7,6 +7,8 @@ const controleSauce = require("../middleware/saucecontrole")
 
 const sauceCtrl = require('../controllers/sauces');
 
+//----routes de l'API
+
 router.get("/", auth, sauceCtrl.getAllSauces);
 router.get('/:id', auth, sauceCtrl.getOneSauce);
 router.post("/", auth, multer, controleSauce, sauceCtrl.createSauce);

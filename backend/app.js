@@ -1,10 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
-
 const sauceRoutes = require('./routes/sauces');
 const userRoutes = require('./routes/auth');
 
+//------Connexion a Moongoose
 mongoose.connect('mongodb+srv://president:oaken@cluster0.bcmn6.mongodb.net/Cluster0?retryWrites=true&w=majority',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
@@ -12,6 +12,8 @@ mongoose.connect('mongodb+srv://president:oaken@cluster0.bcmn6.mongodb.net/Clust
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
 const app = express();
+
+//appel des routes
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');

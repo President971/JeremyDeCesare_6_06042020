@@ -2,6 +2,8 @@ const Sauce = require('../models/sauce');
 
 const fs = require('fs');
 
+// Controleurs des Sauces
+
 exports.getAllSauces = (req, res, next) => {
   Sauce.find()
     .then((sauces) => {
